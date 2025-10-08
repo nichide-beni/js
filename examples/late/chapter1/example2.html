@@ -29,14 +29,18 @@
         }
 
         // 10歳のワンと鳴く犬を宣言しよう
-
+        const dog = new Animal('犬', 'ワン', 10);
         // 3歳のコケコッコーと鳴くニワトリを宣言しよう
-
+        const chicken = new Animal('ニワトリ', 'コケコッコー', 3);
         // 「sample2.html」のコンソール文を使って、犬とニワトリの情報を表示してみよう。
-
+        console.log(`${dog.name}は${dog.getAge()}歳で${dog.sound}と鳴く`);
+        console.log(`${chicken.name}は${chicken.getAge()}歳で${chicken.sound}と鳴く`);
         // クラスの情報を使って、「5歳歳をとった」ことを反映しよう
-
-        // 「sample2.html」のコンソール文を使って、5年後の犬とニワトリの情報を表示してみよう。s
+        dog.setAge(15);
+        chicken.setAge(8);
+        // 「sample2.html」のコンソール文を使って、5年後の犬とニワトリの情報を表示してみよう。
+        console.log(`${dog.name}は${dog.getAge()}歳で${dog.sound}と鳴く`);
+        console.log(`${chicken.name}は${chicken.getAge()}歳で${chicken.sound}と鳴く`);
     </script>
 </body>
 </html>

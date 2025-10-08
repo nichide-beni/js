@@ -20,6 +20,7 @@
             // 認証する
             static auth() {
                 // ここに認証処理
+                Car.isAuthenticated = true;
                 console.log('認証しました');
             }
 
@@ -41,26 +42,41 @@
         // Carクラスを継承した電気自動車クラス
         class ElectricCar extends Car {
             // バッテリー(battery)を宣言
+            battery;
 
             // コンストラクタでバッテリーを設定
+            constructor(brand, model, battery) {
+                // コンストラクタで初期値を設定
+                super(brand, model);
+                this.battery = battery;
+            }
 
             // driveをオーバーライドし、バッテリーの情報を追記する
             drive() {
                 // 「バッテリー」搭載の「ブランド」の「モデル」が走る。など
+                console.log(`${this.battery}搭載の${this.brand}の${this.model}が走る。`);
             }
         }
 
         // Carクラスを継承したトラッククラス
         class Truck extends Car {
             // 積荷(cargo)を宣言
+            cargo;
 
             // コンストラクタでカーゴを設定
+            constructor(brand, model, cargo) {
+                // コンストラクタで初期値を設定
+                super(brand, model);
+                this.cargo = cargo;
+            }
 
             // 親クラスのoperateを呼び出す
             // 追加で「積荷は〇〇です。」というコンソールを出す。〇〇にはcargoの変数の中身を設定する。
             truckOperate() {
                 // 親クラスのoperate
+                this.operate();
                 // コンソールを出力
+                console.log(`積荷は${this.cargo}です。`);
             }
         }
 
@@ -70,6 +86,7 @@
         const truck = new Truck('いすず', 'エルフ', '食品');
 
         // 認証する
+        Car.auth();
 
         normalCar.drive();
         normalCar.operate();
