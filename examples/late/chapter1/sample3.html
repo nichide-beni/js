@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-3 静的なプロパティ</title>
+</head>
+<body>
+    <script>
+        // よく使う宣言方式
+        class Animal {
+            static name;
+            static methodSample() {
+                console.log(`サンプルで「${this.name}」を表示`);
+            }
+        }
+
+        Animal.name = 'しば犬';
+        Animal.methodSample();
+
+        // 以下はどうなるだろうか
+        const animal = new Animal();
+        animal.name = 'ゴールデンレトリーバー';
+        animal.methodSample();
+        Animal.methodSample();
+    </script>
+</body>
+</html>
