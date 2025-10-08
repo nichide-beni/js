@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-3 静的なプロパティ</title>
+</head>
+<body>
+    <script>
+        // よく使う宣言方式
+        class Country {
+            static name;
+            display() {
+                console.log(`サンプルで「${this.name}」を表示`);
+            }
+        }
+
+        // 以下を実行し、間違いを修正して理由を考えてみよう
+        const myContry = new Country();
+        Country.name = 'Japan';
+        myContry.display();
+    </script>
+</body>
+</html>

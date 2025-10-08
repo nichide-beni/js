@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-2 クラスの使い方</title>
+</head>
+<body>
+    <script>
+        //---- 宣言の比較
+        class Sample {
+            // ここに宣言
+        }
+        const Sample2 = class ClassName {
+            // ここに宣言
+        }
+
+        class Sample3 {
+            constructor(value1) {
+                // 初期化処理、引数もOK
+                // 認証する、仮登録のアドレスを設定、etc…
+            }
+
+            varSample; // メンバ変数
+            methodSample() {
+                // メソッドの処理
+            }
+        }
+
+        // よく使う宣言方式
+        class Animal {
+            name;
+            sound = 'speak';
+            #age;
+
+            constructor(name, sound, age) {
+                this.name = name;
+                this.sound = sound;
+                this.#age = age;
+            }
+
+            setAge(age) {
+                this.#age = age;
+            }
+
+            getAge() {
+                return this.#age;
+            }
+        }
+
+        const cat = new Animal('猫', 'ニャー', 20);
+        console.log(`${cat.name}は${cat.getAge()}歳で${cat.sound}と鳴く`);
+    </script>
+</body>
+</html>

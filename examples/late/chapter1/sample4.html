@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-4 クラス継承</title>
+</head>
+<body>
+    <script>
+        class Animal {
+            name;
+
+            constructor(name) {
+                this.name = name;
+            }
+
+            displayName() {
+                console.log(`動物の名前は「${this.name}」`);
+            }
+            displaySpeak() {
+                console.log('( ・∇・)');
+            }
+        }
+
+        class Dog extends Animal {
+            constructor() {
+                // 親クラスのコンストラクタを呼び出す
+                super('犬');
+            }
+
+            // 親クラスのメソッドを上書き(オーバーライド)
+            displaySpeak() {
+                console.log('ワン');
+            }
+        }
+
+        class Cat extends Animal {
+            constructor() {
+                super('猫');
+            }
+
+            displaySpeak() {
+                console.log('ニャー');
+            }
+
+            // 猫クラス限定
+            like() {
+                console.log('猫じゃらし');
+            }
+        }
+
+        // 表示して確かめる
+        const animal = new Animal();
+        const dog = new Dog();
+        const cat = new Cat();
+        animal.displayName();
+        animal.displaySpeak();
+        dog.displayName();
+        dog.displaySpeak();
+        cat.displayName();
+        cat.displaySpeak();
+        // エラーで止まらないように猫から記述
+        cat.like();
+        dog.like();
+    </script>
+</body>
+</html>

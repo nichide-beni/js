@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-2 クラスの使い方</title>
+</head>
+<body>
+    <script>
+        // よく使う宣言方式
+        class Animal {
+            name;
+            sound = 'speak';
+            #age;
+
+            constructor(name, sound, age) {
+                this.name = name;
+                this.sound = sound;
+                this.#age = age;
+            }
+
+            setAge(age) {
+                this.#age = age;
+            }
+
+            getAge() {
+                return this.#age;
+            }
+        }
+
+        // 10歳のワンと鳴く犬を宣言しよう
+
+        // 3歳のコケコッコーと鳴くニワトリを宣言しよう
+
+        // 「sample2.html」のコンソール文を使って、犬とニワトリの情報を表示してみよう。
+
+        // クラスの情報を使って、「5歳歳をとった」ことを反映しよう
+
+        // 「sample2.html」のコンソール文を使って、5年後の犬とニワトリの情報を表示してみよう。s
+    </script>
+</body>
+</html>

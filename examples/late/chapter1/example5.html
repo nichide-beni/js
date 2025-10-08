@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-5 コードを実装してみよう</title>
+</head>
+<body>
+    <script>
+        class Car {
+            brand;
+            model;
+            static isAuthenticated = false;
+
+            constructor(brand, model) {
+                this.brand = brand;
+                this.model = model;
+            }
+
+            // 認証する
+            static auth() {
+                // ここに認証処理
+                console.log('認証しました');
+            }
+
+            // 車を走らせるメソッド
+            drive() {
+                console.log(`${this.brand}の${this.model}が走る。`);
+            }
+
+            // 自分で運転するメソッド、免許を持っている必要があるため認証が必要
+            operate() {
+                if (!Car.isAuthenticated) {
+                    // 例外を投げる※ここは変えなくてOK
+                    throw new Error('認証に失敗しました。');
+                }
+                console.log(`${this.brand}の${this.model}を運転する。`);
+            }
+        }
+
+        // Carクラスを継承した電気自動車クラス
+        class ElectricCar extends Car {
+            // バッテリー(battery)を宣言
+
+            // コンストラクタでバッテリーを設定
+
+            // driveをオーバーライドし、バッテリーの情報を追記する
+            drive() {
+                // 「バッテリー」搭載の「ブランド」の「モデル」が走る。など
+            }
+        }
+
+        // Carクラスを継承したトラッククラス
+        class Truck extends Car {
+            // 積荷(cargo)を宣言
+
+            // コンストラクタでカーゴを設定
+
+            // 親クラスのoperateを呼び出す
+            // 追加で「積荷は〇〇です。」というコンソールを出す。〇〇にはcargoの変数の中身を設定する。
+            truckOperate() {
+                // 親クラスのoperate
+                // コンソールを出力
+            }
+        }
+
+        // 出力例
+        const normalCar = new Car('トヨタ', 'ヤリス');
+        const evCar = new ElectricCar('日産', 'アリア', 'リチウムイオン');
+        const truck = new Truck('いすず', 'エルフ', '食品');
+
+        // 認証する
+
+        normalCar.drive();
+        normalCar.operate();
+
+        evCar.drive();
+        evCar.operate();
+
+        truck.drive();
+        truck.truckOperate();
+    </script>
+</body>
+</html>
