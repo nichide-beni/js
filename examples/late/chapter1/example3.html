@@ -10,15 +10,14 @@
         // よく使う宣言方式
         class Country {
             static name;
-            display() {
+            static display() {
                 console.log(`サンプルで「${this.name}」を表示`);
             }
         }
 
         // 以下を実行し、間違いを修正して理由を考えてみよう
-        const myContry = new Country();
         Country.name = 'Japan';
-        myContry.display();
+        Country.display();
     </script>
 </body>
 </html>
