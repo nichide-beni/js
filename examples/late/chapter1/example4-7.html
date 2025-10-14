@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-4-6 小クラスから静的プロパティを呼んでみよう</title>
+</head>
+<body>
+    <script>
+        class Parent {
+            static name;
+
+            constructor() {
+                this.name = '親クラス';
+            }
+
+            static display() {
+                console.log(`${this.name}のコンソールです`);
+            }
+        }
+
+        class Child extends Parent {
+
+        }
+
+        // Childクラスを使って「子クラスのコンソールです」と表示されるように調整しよう
+
+        Child.display();
+    </script>
+</body>
+</html>
