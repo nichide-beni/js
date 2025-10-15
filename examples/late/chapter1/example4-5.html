@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1-4-2 子クラスから親クラスのコンストラクタを呼んでみよう</title>
+    <title>1-4-5 親クラスのstaticフィールドを呼んでみよう</title>
 </head>
 <body>
     <script>
         class Parent {
-            constructor() {
-                console.log('親クラスのコンソールです');
+            static display() {
+                console.log('親クラスのコンソールです')
             }
         }
 
-        class Child {
-            constructor() {
-                console.log('小クラスのコンソールです');
-            }
+        class Child extends Parent {
         }
 
-        // コンソールで、「親クラスのコンソールです」→「小クラスのコンソールです」と表示されるようにプログラムを調整しよう
+        // コンソールで、「親クラスのコンソールです」と表示されるようにプログラムを調整しよう
+        // Childクラスを使って実装しよう
+        Child.display();
     </script>
 </body>
 </html>

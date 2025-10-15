@@ -13,13 +13,15 @@
             }
         }
 
-        class Child {
+        class Child extends Parent {
             constructor() {
-                console.log('小クラスのコンソールです');
+                super();
+                console.log('子クラスのコンソールです');
             }
         }
 
-        // コンソールで、「親クラスのコンソールです」→「小クラスのコンソールです」と表示されるようにプログラムを調整しよう
+        // コンソールで、「親クラスのコンソールです」→「子クラスのコンソールです」と表示されるようにプログラムを調整しよう
+        const child = new Child();
     </script>
 </body>
 </html>

@@ -9,16 +9,17 @@
     <script>
         class Parent {
             display() {
-                console.log('小クラスで表示させます。');
+                console.log('子クラスで表示させます。');
             }
         }
 
-        class Child {
+        class Child extends Parent {
 
         }
 
         // childからdisplayメソッドが実行できるようにParentクラスを継承させよう
         const child = new Child();
+        child.display();
     </script>
 </body>
 </html>
