@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-4-4 子クラスの情報で親クラスのメソッドを上書きしてみよう(オーバーライド)</title>
+</head>
+<body>
+    <script>
+        class Parent {
+            display() {
+                console.log('親クラスのコンソールです');
+            }
+        }
+
+        class Child extends Parent {
+            display() {
+                console.log('子クラスのコンソールです');
+            }
+        }
+
+        // chilsインスタンスを使って、コンソールで「子クラスのコンソールです」と表示されるようにプログラムを調整しよう
+        const child = new Child();
+        child.display();
+    </script>
+</body>
+</html>

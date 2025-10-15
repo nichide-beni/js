@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-4-7 子クラスから静的プロパティを上書きしてみよう</title>
+</head>
+<body>
+    <script>
+        class Parent {
+            static #name = '親クラス';
+
+            static get name() {
+                return Parent.#name;
+            }
+
+            static set name(setName) {
+                Parent.#name = setName;
+            }
+
+            static display() {
+                console.log(`${Parent.name}のコンソールです`);
+            }
+        }
+
+        class Child extends Parent {
+
+        }
+
+        // Childクラスを使って「子クラスのコンソールです」と表示されるように調整しよう
+        // ※うまくいかないと思われるので、いくつかパターンを試してみよう
+        Child.name = '子クラス';
+        Child.display();
+    </script>
+</body>
+</html>

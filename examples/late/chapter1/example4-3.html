@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-4-3 継承と子クラスの動作を確認しよう</title>
+</head>
+<body>
+    <script>
+        class Parent {
+            parentDisplay() {
+                console.log('親クラスのコンソールです');
+            }
+        }
+
+        class Child extends Parent {
+            // childDisplayを定義し、「子クラスのコンソールです」とコンソールに表示しよう
+            childDisplay() {
+                console.log('子クラスのコンソールです');
+            }
+        }
+
+        // コンソールで、「親クラスのコンソールです」→「子クラスのコンソールです」と表示されるようにプログラムを調整しよう
+        // childクラスだけを使って表現すること
+        const child = new Child();
+        child.parentDisplay();
+        child.childDisplay();
+    </script>
+</body>
+</html>

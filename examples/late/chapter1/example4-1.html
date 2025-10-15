@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-4-1 クラスの継承を書いてみよう</title>
+</head>
+<body>
+    <script>
+        class Parent {
+            display() {
+                console.log('子クラスで表示させます。');
+            }
+        }
+
+        class Child extends Parent {
+
+        }
+
+        // childからdisplayメソッドが実行できるようにParentクラスを継承させよう
+        const child = new Child();
+        child.display();
+    </script>
+</body>
+</html>
