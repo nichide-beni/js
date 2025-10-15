@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1-4-6 小クラスから静的プロパティを呼んでみよう</title>
+    <title>1-4-4 子クラスの情報で親クラスのメソッドを上書きしてみよう(オーバーライド)</title>
 </head>
 <body>
     <script>
         class Parent {
-            static name;
-
-            constructor() {
-                this.name = '親クラス';
+            display() {
+                console.log('親クラスのコンソールです');
             }
 
-            static display() {
-                console.log(`${this.name}のコンソールです`);
-            }
         }
 
         class Child extends Parent {
-
+            
         }
 
-        // Childクラスを使って「親クラスのコンソールです」と表示されるように調整しよう
+        // chilsインスタンスを使って、コンソールで「子クラスのコンソールです」と表示されるようにプログラムを調整しよう
+        const child = new Child();
+        child.display();
     </script>
 </body>
 </html>
