@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[補足]初出の構文を学ぼう</title>
+</head>
+<body>
+  <h1>[補足]初出の構文を学ぼう</h1>
+
+  <ul>
+    <li>typeof</li>
+    <li>split</li>
+    <li>join</li>
+  </ul>
+
+  <script>
+    // ブラウザでコンソールをチェックし、どのように表示されるか確認しよう
+    // typeof {データ} → 渡したデータの型(データ型)を文字列として返却する
+    console.log([
+      typeof 1,
+      typeof 'str',
+      typeof [],
+      typeof {},
+      typeof function f(){},
+      typeof null,
+      typeof undefined,
+      typeof naiyo,
+    ]);
+
+    const str = 'test-str-split-result';
+    console.log(str.split('-'));
+
+    const arr = ['test', 'array', 'result'];
+    console.log(arr.join('---'));
+  </script>
+</body>
+</html>
