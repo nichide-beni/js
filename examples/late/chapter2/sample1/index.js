@@ -11,8 +11,9 @@ function displayTable(id, targetClass) {
         + '<th>端末名</th>'
         + '<th>モデル</th>'
         + '<th>リリース日</th>'
-        // フィーチャーフォン以外の場合に表示
         + '<th>機能</th>'
+        // スマートフォンの場合に表示
+        + (typeof targetClass[0].apps !== 'undefined' ? '<th>インストールアプリ</th>' : '')
         // フィーチャーフォンの場合はプラン
 
       + '</tr></thead><tbody>'
