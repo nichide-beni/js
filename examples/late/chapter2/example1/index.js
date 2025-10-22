@@ -1,7 +1,5 @@
-import { FeaturePhone } from '../example1/featurephone.js';
 import { Phone } from './phone.js';
 import { SmartPhone } from './smartphone.js';
-// フィーチャーフォンクラスを読み込もう
 
 function displayTable(id, targetClass) {
   let content = '';
@@ -13,9 +11,8 @@ function displayTable(id, targetClass) {
         + '<th>端末名</th>'
         + '<th>モデル</th>'
         + '<th>リリース日</th>'
+        // フィーチャーフォン以外の場合に表示
         + '<th>機能</th>'
-        // スマートフォンの場合に表示
-        + (typeof targetClass[0].apps !== 'undefined' ? '<th>インストールアプリ</th>' : '')
         // フィーチャーフォンの場合はプラン
 
       + '</tr></thead><tbody>'
@@ -37,7 +34,6 @@ function displayTable(id, targetClass) {
       }
       content += '</tr>';
     });
-    // フィーリャーフォンのプランを表示しよう
 
     content += '</tbody>';
     el.innerHTML = content;
@@ -56,12 +52,6 @@ const smartphones = [
   new SmartPhone('iPhone', '17', '2025-2-1', 'カメラ性能が大幅向上', 'AppleStore'),
 ];
 
-const featurephones = [
-  new FeaturePhone('端末1', 'ver1', '2025-1-1', 'プランが充実', ['3000円', 'Aプラン'])
-  // 端末2として、5000円のBプランを用意してみよう
-  // 端末3として、10000円のCプランを用意しよう。Cプランには、さらに「家族割あり」という項目を追加しよう(テーブル上でCプランの後に、料金とプランと同様に改行表示させる)
-];
-
 displayTable('phone-table', phones);
 displayTable('smartphone-table', smartphones);
-// フィーチャーフォンを表示してみよう
+
