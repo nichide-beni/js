@@ -34,9 +34,9 @@ function displayTable(id, targetClass) {
           content += `<td>${row.apps}</td>`;
         }
       }
+    // フィーチャーフォンのプランを表示しよう
       content += '</tr>';
     });
-    // フィーリャーフォンのプランを表示しよう
 
     content += '</tbody>';
     el.innerHTML = content;
