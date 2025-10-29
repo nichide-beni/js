@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サンプル1 スプレッド構文</title>
+  <style>
+    th, td { padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>スプレッド構文</h1>
+  <p>コンソールでスプレッド構文の結果を確認しよう</p>
+
+  <script>
+    /**
+     * 配列の結合
+    */
+    const fruits = ['apple', 'banana'];
+    const moreFruits = ['orange', ...fruits, 'grape'];
+    console.log(moreFruits);
+
+    /**
+     * 配列のコピー
+    */
+    const original = [1, 2, 3];
+    const copy = [...original];
+    console.log(copy);
+
+    /**
+     * オブジェクトの結合
+    */
+    const contact = { email: 'alice@example.com' };
+    const profile = { name: 'Alice', age: 25, ...contact };
+    console.log(profile);
+
+    /**
+     * オブジェクトのコピー
+    */
+    const person = { name: 'Mike', age: 40 };
+    const copiedPerson = { ...person };
+    console.log(copiedPerson);
+
+    /**
+     * 関数の引数としてまとめて渡す方法
+    */
+    function sum(a, b, c) {
+      return a + b + c;
+    }
+    const numbers = [1, 2, 3];
+    console.log(sum(...numbers)); // 6
+
+  </script>
+</body>
+</html>
