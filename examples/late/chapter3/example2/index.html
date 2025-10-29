@@ -23,31 +23,32 @@
     const primaryColors = ['red', 'blue', 'yellow'];
     const secondaryColors = ['green', 'orange', 'purple'];
     // [ここにallColorsを定義]
-
+    const allColors = [ ...primaryColors, ...secondaryColors ];
     // [ここにcopiedColorsを定義]
-
+    const copiedColors = [ ...allColors ];
     // [ここに、allColors, copiedColorsをそれぞれ表示]
-
+    console.log(allColors);
+    console.log(copiedColors);
 
     /**
      * 演習2 レスト構文
      * レスト構文で引数を受け取る関数の定義を完成させ、コンソールで表示を確認する
      * 「回答: 10」
     */
-    function sumAll(/* [ここにレスト構文を使って引数を定義] */) {
+    function sumAll(...numbers) {
       let total = 0;
       for (const num of numbers) {
         total += num;
       }
       return total;
     }
-    console.log(1, 2, 3, 4);
+    console.log(sumAll(1, 2, 3, 4));
 
 
     /**
      * 演習3 スプレッド構文とレスト構文
-     * userオブジェクトから name と email を取り出し、それ以外のプロパティを adminUser にまとめる
-     * adminUser に adminFlag オブジェクトを結合(adminUser に adminFlag の値を結合する)
+     * userオブジェクトから name と email を取り出し、それ以外のプロパティを otherInfo にまとめる
+     * adminUser に otherInfo と adminFlag オブジェクトを結合(otherInfo と adminFlag の値を結合する)
      * adminUser をコンソールで表示する
      * 「回答: name: Suzuki, email: Suzuki@example.com, isAdmin: true ※順不同」
     */
@@ -59,9 +60,9 @@
     };
     const adminFlag = { isAdmin: true };
     // [ここにadminUserの宣言を記述]
-
+    const {id, age, ...otherInfo} = user;
     // [ここにadminUserとadminFlagの結合を記述]
-
+    adminUser = { ...otherInfo, ...adminFlag };
 
     console.log(adminUser);
   </script>
