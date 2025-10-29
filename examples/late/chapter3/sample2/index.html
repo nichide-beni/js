@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サンプル2 レスト構文</title>
+  <style>
+    th, td { padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>レスト構文</h1>
+  <p>コンソールでレスト構文の結果を確認しよう</p>
+
+  <script>
+    /**
+     * 配列の分割
+    */
+    const numbers = [1, 2, 3, 4, 5];
+    const [first, second, ...rest] = numbers;
+    console.log(first);
+    console.log(second);
+    console.log(rest);
+
+    /**
+     * オブジェクトの結合
+    */
+    const user = {
+      id: 101,
+      name: 'Taro',
+      email: 'taro@example.com',
+      age: 30
+    };
+    const { name, ...otherInfo } = user;
+    console.log(name);
+    console.log(otherInfo); 
+
+
+    /**
+     * オブジェクトのコピー
+    */
+    function greetAll(...names) {
+      /** foreachに近い、コールバック関数が不要なため短く書ける */
+      for (const name of names) {
+        console.log(`Hello, ${name}!`);
+      }
+    }
+    greetAll('Alice', 'Bob', 'Charlie');
+  </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>演習2 スプレッド/レスト構文</title>
+  <style>
+    th, td { padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>スプレッド/レスト構文</h1>
+  <p>コンソールでスプレッド/レスト構文の結果を確認しよう</p>
+
+  <script>
+    /**
+     * 演習1 スプレッド構文
+     * 次の配列を使って、新しい配列 allColors を作成する。
+     * また、allColors のコピーとして、 copiedColors を作成する。
+     * 最後に、 allColors, copiedColors をそれぞれコンソールで表示する。
+     * 「回答: red, blue, yellow, green, orange, purpleを2行で表示 ※順不同」
+    */
+    const primaryColors = ['red', 'blue', 'yellow'];
+    const secondaryColors = ['green', 'orange', 'purple'];
+    // [ここにallColorsを定義]
+
+    // [ここにcopiedColorsを定義]
+
+    // [ここに、allColors, copiedColorsをそれぞれ表示]
+
+
+    /**
+     * 演習2 レスト構文
+     * レスト構文で引数を受け取る関数の定義を完成させ、コンソールで表示を確認する
+     * 「回答: 10」
+    */
+    function sumAll(/* [ここにレスト構文を使って引数を定義] */) {
+      let total = 0;
+      for (const num of numbers) {
+        total += num;
+      }
+      return total;
+    }
+    console.log(1, 2, 3, 4);
+
+
+    /**
+     * 演習3 スプレッド構文とレスト構文
+     * userオブジェクトから name と email を取り出し、それ以外のプロパティを adminUser にまとめる
+     * adminUser に adminFlag オブジェクトを結合(adminUser に adminFlag の値を結合する)
+     * adminUser をコンソールで表示する
+     * 「回答: name: Suzuki, email: Suzuki@example.com, isAdmin: true ※順不同」
+    */
+    const user = {
+      id: 1001,
+      name: 'Suzuki',
+      email: 'Suzuki@example.com',
+      age: 28
+    };
+    const adminFlag = { isAdmin: true };
+    // [ここにadminUserの宣言を記述]
+
+    // [ここにadminUserとadminFlagの結合を記述]
+
+
+    console.log(adminUser);
+  </script>
+</body>
+</html>
