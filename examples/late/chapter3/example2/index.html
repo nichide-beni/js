@@ -47,9 +47,10 @@
     /**
      * 演習3 スプレッド構文とレスト構文
      * userオブジェクトから name と email を取り出し、それ以外のプロパティを otherInfo にまとめる
-     * adminUser に otherInfo と adminFlag オブジェクトを結合(otherInfo と adminFlag の値を結合する)
+     * adminUser に name, email と adminFlag オブジェクトを結合(name と email と adminFlag の値を結合する)
      * adminUser をコンソールで表示する
-     * 「回答: name: Suzuki, email: Suzuki@example.com, isAdmin: true ※順不同」
+     * otherInfo をコンソールで表示する
+     * 「回答: name: Suzuki, email: Suzuki@example.com, isAdmin: true ※順不同」、改行して、「age: 28, id: 1001」
     */
     const user = {
       id: 1001,
@@ -58,12 +59,13 @@
       age: 28
     };
     const adminFlag = { isAdmin: true };
-    // [ここにotherInfoの宣言を記述]
+    // [ここにname, email, otherInfoの宣言を記述]
 
-    // [ここにadminUserとadminFlagの結合を記述]
+    // [ここにname, emailとadminFlagの結合を記述]
 
 
     console.log(adminUser);
+    console.log(otherInfo);
   </script>
 </body>
 </html>
