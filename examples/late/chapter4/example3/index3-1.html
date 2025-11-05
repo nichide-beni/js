@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>演習3-1 外部API 首都情報の取得</title>
+  <style>
+    th, td { padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>演習3-1 外部API 首都情報の取得</h1>
+
+  <script>
+    async function getCountry() {
+      try {
+        // [記述]変数responseに 'https://restcountries.com/v3.1/name/japan' の結果を格納
+        const response = ________;
+        // [記述]変数dataに responseのJSON値を格納
+        const data = ________;
+        console.log('国名:', data[0].name.common);
+        console.log('首都:', data[0].capital[0]);
+      } catch (error) {
+        console.error('エラー:', error);
+      }
+    }
+    getCountry();
+
+  </script>
+</body>
+</html>
