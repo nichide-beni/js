@@ -11,17 +11,18 @@
 <body>
   <h1>演習3-2 外部API 外部APIの結果をHTMLに反映</h1>
 
-  <div id="result">[[ここに結果を反映してください]]</div>
-  <!-- [記述]ボタンを押したらresultに結果を反映 -->
-  <button>乱数を取得</button>
+  <!-- [記述]ボタンを押したらavatarに結果を反映 -->
+  <img id="avatar" src="" alt="アバター画像" width="200" />
+  <button>画像を取得</button>
 
 
   <script>
     /**
-     * ボタンを押すたび乱数の間で結果が変わる問題
+     * ボタンを押すたび画像の結果が変わる問題
      * フリー記述のため難易度は高め
-     * 以下のAPIを実行し、1-100までの数値を取得して表示する
-     * https://www.randomnumberapi.com/api/v1.0/random?min=1&max=100&count=1
+     * 以下のAPIを実行し、画像を切り替える
+     * JSONの「message」に画像のURLが存在するので、avatarの参照先を切り替える処理を記述する
+     * https://dog.ceo/api/breeds/image/random
     */
 
   </script>
