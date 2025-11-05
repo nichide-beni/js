@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>演習2 同期処理と非同期処理</title>
+  <style>
+    th, td { padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>演習2 同期処理と非同期処理</h1>
+
+  <script>
+    /**
+     * 解答例: ▼
+     * body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+     * id: 1
+     * title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
+     * userId: 1
+     * 
+     * ヒント: fetchというメソッドを使うと、デフォルトでGET通信を非同期で行う
+     * ヒント: JSON変換は非同期で行われる
+    */
+
+    async function getPost() {
+      const response = /*ここに回答*/('https://jsonplaceholder.typicode.com/posts/1');
+      const data = /*ここに回答*/ response.json();
+      console.log(data);
+    }
+
+    getPost();
+
+  </script>
+</body>
+</html>
