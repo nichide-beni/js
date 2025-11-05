@@ -13,7 +13,7 @@
 
   <!-- [記述]ボタンを押したらavatarに結果を反映 -->
   <img id="avatar" src="" alt="アバター画像" width="200" />
-  <button>画像を取得</button>
+  <button onclick="showRandom()">画像を取得</button>
 
 
   <script>
@@ -24,6 +24,12 @@
      * JSONの「message」に画像のURLが存在するので、avatarの参照先を切り替える処理を記述する
      * https://dog.ceo/api/breeds/image/random
     */
+
+    async function showRandom() {
+      const response = await fetch('https://dog.ceo/api/breeds/image/random');
+      const data = await response.json();
+      document.getElementById('avatar').src = data.message;
+    }
 
   </script>
 </body>

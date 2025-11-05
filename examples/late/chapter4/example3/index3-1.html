@@ -15,9 +15,9 @@
     async function getCountry() {
       try {
         // [記述]変数responseに 'https://restcountries.com/v3.1/name/japan' の結果を格納
-        const response = ________;
+        const response = await fetch('https://restcountries.com/v3.1/name/japan');
         // [記述]変数dataに responseのJSON値を格納
-        const data = ________;
+        const data = await response.json();
         console.log('国名:', data[0].name.common);
         console.log('首都:', data[0].capital[0]);
       } catch (error) {
