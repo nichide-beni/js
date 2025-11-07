@@ -13,7 +13,9 @@
 
   <!-- [記述]ボタンを押したらavatarに結果を反映 -->
   <img id="avatar" src="" alt="アバター画像" width="200" />
-  <button onclick="showRandom()">画像を取得</button>
+  <!-- <button onclick="showRandom()">画像を取得</button> -->
+
+  <button id="button">画像を取得</button>
 
 
   <script>
@@ -25,11 +27,17 @@
      * https://dog.ceo/api/breeds/image/random
     */
 
-    async function showRandom() {
+    // async function showRandom() {
+    //   const response = await fetch('https://dog.ceo/api/breeds/image/random');
+    //   const data = await response.json();
+    //   document.getElementById('avatar').src = data.message;
+    // }
+
+    document.getElementById('button').addEventListener('click', async function() {
       const response = await fetch('https://dog.ceo/api/breeds/image/random');
       const data = await response.json();
       document.getElementById('avatar').src = data.message;
-    }
+    });
 
   </script>
 </body>
