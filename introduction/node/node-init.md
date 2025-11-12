@@ -256,3 +256,12 @@ app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`)
 })
 ```
+
+それぞれ実行してみる。  
+実行環境としては、「dev」と「start」の両方を立ち上げる。  
+
+```bash
+npm run build
+npm run dev
+npm run start
+```
