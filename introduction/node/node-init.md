@@ -149,7 +149,7 @@ npm install express
 npm install --save-dev vite 
 ```
 
-#### turbopackのエントリーポイントを作成する
+#### viteのエントリーポイントを作成する
 
 クライアント側のメインとなるエントリーポイントを作成する。  
 
